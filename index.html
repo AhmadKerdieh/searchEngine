@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Search </title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <h1>Will We Ever Find the Answer?</h1>
+        </div>
+
+        <button id="btn2" class="collapsible" type="button">Help</button>
+
+        <div id="hdiv" style="display: block;">
+            <h1>How To Use</h1>
+            <h2>In order to search for a specific website enter its URL in the first field.</h2>
+            <h2>Leave it blank for a non-specific search</h2>
+            <h2>Write what you want to search for in the second field </h2>
+        </div>
+
+        <div id="namediv">
+            <h1 id="hname">Findex</h1>            
+        </div>
+        <script async src="https://cse.google.com/cse.js?cx=8496cb49c4b094e5c">
+        </script>
+        <div class="gcse-search" id="srch"></div>
+        <div class="gcse-searchresults"></div>
+     
+        
+        <footer id="footer">
+            <p>More @ https://github.com/AhmadKerdieh</p>
+        </footer>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                content.style.display = "block";
+                }
+            });
+            }
+        </script>   
+    </body>
+</html>
